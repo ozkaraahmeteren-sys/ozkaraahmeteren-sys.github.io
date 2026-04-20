@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEO Interactive - Developer Page</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        p { color: #aaa; margin-bottom: 2rem; }
+        .apps { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
+        .app-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            text-decoration: none;
+            color: #e0e0e0;
+            transition: transform 0.2s, background 0.2s;
+        }
+        .app-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255,255,255,0.1);
+        }
+        .app-card h3 { margin-bottom: 0.5rem; }
+        .app-card span { font-size: 0.85rem; color: #888; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AEO Interactive</h1>
+        <p>Game Developer</p>
+        <div class="apps">
+            <a href="https://play.google.com/store/apps/details?id=com.memoryiq.app" class="app-card">
+                <h3>🧠 Memory IQ Test</h3>
+                <span>Train your memory</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
