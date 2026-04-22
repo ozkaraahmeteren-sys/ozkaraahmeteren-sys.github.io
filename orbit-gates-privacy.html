@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Orbit Gates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0914;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent: #818cf8;
+            --accent-glow: rgba(129, 140, 248, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0b0914 0%, #161230 50%, #0b0914 100%);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Subtle glowing orb in background to fit the "Orbit" theme */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(129, 140, 248, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #e0e7ff 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 300;
+        }
+
+        .content h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #fff;
+            margin: 2rem 0 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .content h3::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            margin-right: 12px;
+            box-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        .content p {
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .content a {
+            color: var(--accent);
+            text-decoration: none;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .content a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent);
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .content a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .content ul {
+            list-style-type: none;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .content ul li {
+            color: var(--text-muted);
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .content ul li::before {
+            content: '→';
+            color: var(--accent);
+            position: absolute;
+            left: -1.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 0.8rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 2rem; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Privacy Policy - Orbit Gates</h1>
+            <p class="last-updated">Last Updated: April 19, 2026</p>
+        </header>
+
+        <div class="content">
+            <p>This privacy policy applies to the <strong>Orbit Gates</strong> (hereinafter referred to as "the App") for mobile devices, which was created by <strong>AEO Interactive</strong> (hereinafter referred to as "the Provider") as a Free service. This service is intended for use "AS IS".</p>
+
+            <h3>1. Information Collection and Use</h3>
+            <p>The App does not require users to create an account or provide personal information (such as name, email, or phone number) to function. However, the App uses third-party services that may collect information used to identify you.</p>
+            <p>The App uses <strong>Google AdMob</strong> to display advertisements. AdMob may collect certain information automatically, including, but not limited to, the type of mobile device you use, your mobile device's unique device ID, the IP address of your mobile device, your mobile operating system, and information about the way you use the App.</p>
+
+            <h3>2. Third Party Privacy Policies</h3>
+            <p>The App's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information:</p>
+            <ul>
+                <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google AdMob & AdSense Privacy Policy</a></li>
+            </ul>
+
+            <h3>3. Cookies</h3>
+            <p>Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory. The App does not use these “cookies” explicitly. However, the app may use third-party code and libraries that use “cookies” to collect information and improve their services.</p>
+
+            <h3>4. Children’s Privacy</h3>
+            <p>The Provider does not use the App to knowingly solicit data from or market to children under the age of 13. If a parent or guardian becomes aware that his or her child has provided us with information without their consent, he or she should contact us at <strong>aeointeractive@gmail.com</strong>. We will delete such information from our files within a reasonable time.</p>
+
+            <h3>5. Security</h3>
+            <p>The Provider is concerned about safeguarding the confidentiality of your information. The Provider provides physical, electronic, and procedural safeguards to protect information processed and maintained.</p>
+
+            <h3>6. Changes</h3>
+            <p>This Privacy Policy may be updated from time to time for any reason. The Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.</p>
+
+            <h3>7. Contact Us</h3>
+            <p>If you have any questions regarding privacy while using the App, or have questions about the practices, please contact the Provider via email at <strong>aeointeractive@gmail.com</strong>.</p>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Developer Page</a>
+    </div>
+</body>
+</html>
