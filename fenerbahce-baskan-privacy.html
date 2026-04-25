@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gizlilik Politikası - Fenerbahçe Başkanlık Simülatörü</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0914;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent: #fdd522;
+            --accent-glow: rgba(253, 213, 34, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0b0914 0%, #1c3a8a 50%, #0b0914 100%);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(253, 213, 34, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #fdd522 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 300;
+        }
+
+        .content h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #fff;
+            margin: 2rem 0 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .content h3::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            margin-right: 12px;
+            box-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        .content p {
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .content a {
+            color: var(--accent);
+            text-decoration: none;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .content ul {
+            list-style-type: none;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .content ul li {
+            color: var(--text-muted);
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .content ul li::before {
+            content: '→';
+            color: var(--accent);
+            position: absolute;
+            left: -1.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 0.8rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 2rem; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gizlilik Politikası</h1>
+            <p style="color: var(--accent); font-weight: bold;">Fenerbahçe Başkanlık Simülatörü</p>
+            <p class="last-updated">Son Güncelleme: 25 Nisan 2026</p>
+        </header>
+
+        <div class="content">
+            <p>Bu gizlilik politikası, <strong>AEO Interactive</strong> (bundan sonra "Sağlayıcı" olarak anılacaktır) tarafından sunulan <strong>Fenerbahçe Başkanlık Simülatörü</strong> mobil uygulaması (bundan sonra "Uygulama" olarak anılacaktır) için geçerlidir. Bu hizmet "OLDUĞU GİBİ" kullanım için sunulmaktadır.</p>
+
+            <h3>1. Bilgi Toplama ve Kullanım</h3>
+            <p>Uygulama, çalışmak için kullanıcıların bir hesap oluşturmasını veya isim, e-posta veya telefon numarası gibi kişisel bilgilerini vermesini gerektirmez. Ancak Uygulama, sizi tanımlamak için kullanılabilecek bilgileri toplayabilen üçüncü taraf hizmetlerini kullanmaktadır.</p>
+            <p>Uygulama, reklamları görüntülemek için <strong>Google AdMob</strong> kullanmaktadır. AdMob, kullandığınız mobil cihazın türü, mobil cihazınızın benzersiz cihaz kimliği, mobil cihazınızın IP adresi, mobil işletim sisteminiz ve Uygulamayı kullanma şekliniz hakkındaki bilgiler dahil ancak bunlarla sınırlı olmamak üzere belirli bilgileri otomatik olarak toplayabilir.</p>
+
+            <h3>2. Üçüncü Taraf Gizlilik Politikaları</h3>
+            <p>Aşağıdaki üçüncü taraf hizmet sağlayıcıların gizlilik politikalarına göz atmanızı öneririz:</p>
+            <ul>
+                <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google AdMob & AdSense Gizlilik Politikası</a></li>
+            </ul>
+
+            <h3>3. Çerezler</h3>
+            <p>Uygulama, bu çerezleri açıkça kullanmaz. Ancak Uygulama, hizmetlerini geliştirmek ve bilgi toplamak için "çerez" kullanan üçüncü taraf kodları ve kitaplıkları kullanabilir.</p>
+
+            <h3>4. Çocukların Gizliliği</h3>
+            <p>Sağlayıcı, Uygulamayı 13 yaşın altındaki çocuklardan bilerek veri istemek veya onlara pazarlama yapmak için kullanmaz. Bir ebeveyn veya vasinin, çocuğunun rızası olmadan bize bilgi verdiğini fark etmesi durumunda, <strong>aeointeractive@gmail.com</strong> adresinden bizimle iletişime geçmelidir. Bu tür bilgileri dosyalarımızdan makul bir süre içinde sileceğiz.</p>
+
+            <h3>5. Güvenlik</h3>
+            <p>Bilgilerinizin gizliliğini korumak bizim için önemlidir. İşlenen ve bakımı yapılan bilgileri korumak için fiziksel, elektronik ve prosedürel güvenceler sağlıyoruz.</p>
+
+            <h3>6. Değişiklikler</h3>
+            <p>Bu Gizlilik Politikası herhangi bir nedenle zaman zaman güncellenebilir. Herhangi bir değişiklik için bu Gizlilik Politikasına düzenli olarak danışmanız tavsiye edilir.</p>
+
+            <h3>7. İletişim</h3>
+            <p>Uygulamayı kullanırken gizlilikle ilgili herhangi bir sorunuz varsa veya uygulamalar hakkında sorularınız varsa, lütfen <strong>aeointeractive@gmail.com</strong> adresinden e-posta yoluyla Sağlayıcı ile iletişime geçin.</p>
+        </div>
+
+        <a href="index.html" class="back-link">← Geliştirici Sayfasına Dön</a>
+    </div>
+</body>
+</html>
